@@ -1,2 +1,2 @@
 # BestShop
-Not responsive web design prepared durring Coderslab workshop.
+Not responsive web design prepared during Coderslab workshop.
