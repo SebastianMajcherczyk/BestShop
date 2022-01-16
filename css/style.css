@@ -340,17 +340,84 @@ header .navi a:hover{
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+}
+
+.pricelist h4{
+    font-family: Raleway, sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.pricelist h5{
+    font-family: "Open Sans", sans-serif;
+    font-weight: lighter;
+    font-size: 46px;
 }
 .pricelist1,
 .pricelist2,
 .priselist3{
     width: 372px;
     height: 461px;
-    border: 2px solid black;
     border-radius: 25px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
+
+}
+.pricelist button{
+    width: 150px;
+    height: 50px;
+    font-family: "Open Sans", sans-serif ;
+    font-size: 13px;
+    font-weight: bold;
+    color: var(--color-white);
+    border-radius: 25px;
+    border: 0;
+    position: relative;
+    bottom: -77px
+}
+
+.pricelist li{
+    font-family: "Open Sans", sans-serif;
+    font-size: 14px;
+
+
+}
+.pricelist1 li:nth-of-type(1)::before,
+.pricelist1 li:nth-of-type(2)::before,
+.pricelist1 li:nth-of-type(3)::before{
+    content: "\f14a";
+    font-family: "Font Awesome 5 Free";
+    color: var(--color-green);
+    width: 5px;
+    height: 5px;
+    display: block;
+    position: relative;
+    left: -20px;
+    top: 5px;
+}
+
+.pricelist1 li:nth-of-type(4)::before,
+.pricelist1 li:nth-of-type(5)::before{
+    content: "\f410";
+    font-family: "Font Awesome 5 Free";
+    color: var(--color-redish);
+    width: 5px;
+    height: 5px;
+    display: block;
+    position: relative;
+    left: -20px;
+    top: 5px;
+}
+.pricelist1{
+    border: 1px solid var(--color-redish);
+}
+.pricelist1 button{
+    background-color: var(--color-redish);
+}
+.pricelist1 h5{
+    color: var(--color-redish);
 
 }
