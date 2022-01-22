@@ -6,7 +6,7 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/main.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&family=Raleway:wght@300;400;700;800&display=swap" rel="stylesheet">
@@ -14,26 +14,29 @@
     <title>BestShop</title>
 </head>
 <body>
-<header>
-    <div class="container">
+<section class="main_container">
+    <header class="header_container">
+
         <h2 class="logo">BestShop</h2>
+        <input type="checkbox" class="hamburger" id="hamburger">
+        <label for="hamburger" class="hamburger_btn"></label>
         <div class="navi">
             <ul>
                 <li><a href="#">WHY US</a></li>
-                <li><a href="#">BENEFITS</a></li>
-                <li><a href="#">PRICES</a></li>
+                <li><a href="#benefits_container">BENEFITS</a></li>
+                <li><a href="#pricelist">PRICES</a></li>
                 <li><a href="#">CONTACT</a></li>
             </ul>
         </div>
-    </div>
-</header>
+
+    </header>
 <section class="open">
-    <div class="container">
+    <div class="text">
         <h1>Sell More!</h1>
         <p>Open shop on our platform and increase your sales</p>
         <button>Open your shop</button>
-        <img src="/assets/Background.png" alt="Desktop">
     </div>
+    <div><img src="/assets/Background.png" alt="Desktop"></div>
 
 </section>
 <section class="statistics">
@@ -66,22 +69,20 @@
         </div>
     </div>
 </section>
-<section class="benefits container">
+<section class="benefits_container" id="benefits_container">
     <div class="first">
         <div class="div_text">
             <h3>Be always first</h3>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
         </div>
-        <div class="div_picture">
+        <div class="div_picture1">
             <img src="/assets/Macbook.png" alt="Macbook">
-            <div class="rectangle"></div>
         </div>
     </div>
 
     <div class="second">
-        <div class="div_picture">
+        <div class="div_picture2">
             <img src="/assets/iPhone.png" alt="iPhone">
-            <div class="circle"> </div>
         </div>
         <div class="div_text">
             <h3>Your shop is<br> where you are!</h3>
@@ -95,18 +96,21 @@
             <h3>Increase recognition<br> your brand!</h3>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
         </div>
+        <div class="div_picture3">
             <img src="/assets/Trumpet.png" alt="Trumpet">
+        </div>
     </div>
 
 
 </section>
 <section class="last">
-    <section class="pricing">
+    <section class="pricing" id="pricelist">
         <h3>Pricing</h3>
         <section class="pricelist">
             <div class="pricelist1">
                 <h4>Basic</h4>
                 <h5>$0</h5>
+                <span>empty</span>
                 <ul>
                     <li>100 MB HDD</li>
                     <li>1 Subdomain</li>
@@ -120,6 +124,7 @@
             <div class="pricelist2">
                 <h4>Professional</h4>
                 <h5>$25</h5>
+                <span>Limited offer</span>
                     <ul>
                         <li>100 MB HDD</li>
                         <li>1 Subdomain</li>
@@ -129,9 +134,10 @@
                     </ul>
                 <button>Begin</button>
             </div>
-            <div class="pricelist3">
+            <div class="pricelist3" >
                 <h4>Premium</h4>
                 <h5>$60</h5>
+                <span>Limited offer</span>
                 <ul>
                     <li>2 GB HDD</li>
                     <li>5 Subdomain</li>
@@ -150,6 +156,6 @@
 
 
 </section>
-
+</section>
 </body>
 </html>

@@ -1,0 +1,538 @@
+@import "generic/reset";
+@import "elements/header";
+@import "settings/variables";
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+//:root{
+//  --color-primary:#08A6E4;
+//  --color-primary-shadow: rgba(7, 172, 230, .16);
+//  --color-redish: #fb3b64;
+//  --color-green: #55DFB4;
+//  --color-black: #000;
+//  --color-grey: #a5a5a5;
+//  --color-light-grey: #F7F7F7;
+//  --color-white: #fff
+//
+//}
+h3{
+  font-family: Raleway, sans-serif;
+  font-size: 36px;
+}
+
+body{
+  background-color: $color-light-grey;
+}
+.main_container{
+  margin: 0 auto;
+  max-width: 1626px;
+  background-color: $color-light-grey;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+a{
+  text-decoration: none;
+}
+
+/*Header*/
+.header_container{
+  width: 100%;
+  height: 70px;
+  background: $color-white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, .29);
+  margin-bottom: 10px;
+  position: relative;
+
+}
+
+header .logo{
+  font-family: 'Raleway', sans-serif;
+  font-size: 32px;
+  color: $color-primary;
+  margin-left: 136px;
+}
+
+header .navi{
+  font-family: 'Open Sans', sans-serif;
+  font-size: 11px;
+  font-weight: bold;
+
+  display: block;
+  margin-right: 136px;
+  border-bottom: 4px solid rgba(0, 0, 0, 0);
+  a {
+    color: $color-grey;
+    padding: 27px;
+  }
+  ul {
+    display: flex;
+    width: 500px;
+    justify-content: space-between;
+  }
+}
+header .navi a:hover{
+  color: #000;
+  border-bottom: 4px solid $color-primary;
+}
+
+
+@media (max-width: 792px) {
+  header .navi {
+    position: absolute;
+    top: -200px;
+    left: 10px;
+    li {
+      padding: 10px 0;
+    }
+  }
+}
+  /* End of HEADER section*/
+
+
+/*Start of OPEN section*/
+
+  .open .text {
+    padding-top: 130px;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .open img {
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+    align-self: flex-end;
+    background-color: white;
+  }
+  .open h1 {
+    font-family: Raleway, sans-serif;
+    font-size: 49px;
+  }
+
+  .open p {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    margin-top: 20px;
+    margin-bottom: 38px;
+  }
+  .open button {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    color: $color-white;
+    background-color: #08A6E4;
+    padding: 22px 157px;
+    border: 0;
+    border-radius: 34px;
+    box-shadow: 5px 10px 14px $color-primary-shadow;
+  }
+  /*End of section "Open"*/
+
+
+  /*Start of STATISTICS section*/
+  .statistics {
+    width: 1626px;
+    background-color: $color-white;
+    display: flex;
+    justify-content: center;
+  }
+  .statistics h3 {
+    margin: 100px;
+
+  }
+  .stats_section {
+    width: 131px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+  }
+
+  .icon {
+    width: 63px;
+    height: 63px;
+    border-radius: 50%;
+    position: relative;
+  }
+
+  .stats_section:nth-of-type(1) > .icon {
+    background-color: $color-redish;
+  }
+
+  .stats_section:nth-of-type(2) > .icon {
+    background-color: $color-primary;
+  }
+  .stats_section:nth-of-type(3) > .icon {
+    background-color: $color-green;
+  }
+
+  .stats_section:nth-of-type(1) > .icon img {
+    position: absolute;
+    left: 32px;
+    top: 5px;
+  }
+  .stats_section:nth-of-type(2) > .icon img {
+    position: absolute;
+    left: 20px;
+    top: 15px;
+  }
+  .stats_section:nth-of-type(3) > .icon img {
+    position: absolute;
+    left: 30px;
+    top: 5px;
+  }
+  .statistics h5 {
+    font-family: Raleway, sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    letter-spacing: 6px;
+    margin: 20px;
+  }
+  .statistics h6
+  {
+    font-family: Raleway, sans-serif;
+    font-size: 17px;
+    color: $color-grey;
+    text-align: center;
+    line-height: 23px;
+
+  }
+  .stats_menu
+  {
+    display: flex;
+    justify-content: space-evenly;
+  }
+@media (max-width: 792px)
+{
+  .stats_menu
+  {
+  flex-direction: column;
+  align-items: center;
+  }
+
+}
+
+/*End of STATISTICS section*/
+
+
+
+
+/*Start of BENEFITS section*/
+ .benefits_container{
+   max-width: 1124px;
+   margin: 105px 121px;
+   background-color: $color-light-grey;
+ }
+ .benefits_container>div{
+   height: 370px;
+   margin-bottom: 37px;
+   display: flex;
+   justify-content: space-between;
+   background-color: $color-white;
+ }
+
+.first .div_text{
+  width: 415px;
+  height: 186px;
+  margin: 25px auto;
+  h3,
+  p{
+    margin-bottom: 50px;
+  }
+  &::after {
+        content: "";
+        height: 4px;
+        width: 330px;
+        background-color: $color-redish;
+        position: absolute;
+        z-index: 6;
+
+  }
+}
+
+.first img{
+  width: 386px;
+  margin: 113px 100px 38px 0;
+  position: relative;
+  z-index: 1;
+
+}
+.div_picture1::before{
+  content: '';
+  width: 180px;
+  height: 180px;
+  border-radius: 30px;
+  background-color: $color-redish;
+  position: absolute;
+  transform: translate(215px,  75px) rotate(45deg);
+
+}
+
+.second .div_text{
+  width: 415px;
+  height: 222px;
+  margin: 25px auto;
+  h3,
+  p{
+    margin-bottom: 50px;
+  }
+  &::after{
+        content: "";
+        height: 4px;
+        width: 330px;
+        background-color: $color-primary;
+        position: absolute;
+        z-index: 6;
+
+  }
+}
+.second img{
+  width: 400px;
+  margin: 50px 50px;
+  position: relative;
+  z-index: 1;
+}
+
+.div_picture2::before{
+  content: '';
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  background-color: $color-primary;
+  position: absolute;
+  transform: translate(57px, 25px);
+
+
+}
+.benefits_container .third {
+  justify-content: space-between;
+  background-color: $color-light-grey;
+}
+
+.div_text{
+  max-width: 530px;
+  height: 370px;
+  padding: 70px ;
+  background-color: $color-white;
+  h3,
+  p{
+    margin-bottom: 50px;
+  }
+  &::after {
+      content: "";
+      height: 4px;
+      width: 330px;
+      background-color: $color-green;
+      position: absolute;
+      z-index: 6;
+      }
+}
+.third img{
+      max-width: 416px;
+      height: 219px;
+      position: relative;
+      margin-top: 90px;
+      margin-right: 100px;
+      z-index: 3;
+}
+.div_picture3{
+  width: 416px;
+  background-color: $color-green;
+  margin-left: 60px;
+}
+
+  .last {
+    width: 100%;
+    height: 1395px;
+    background-color: $color-white;
+    padding-top: 130px;
+
+  }
+  .pricing {
+    width: 1266px;
+    height: 616px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .pricing h3 {
+    text-align: center;
+    margin-bottom: 70px;
+  }
+  .pricelist {
+    height: 405px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+  }
+
+  .pricelist h4 {
+    font-family: Raleway, sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+  }
+
+  .pricelist h5 {
+    font-family: "Open Sans", sans-serif;
+    font-weight: lighter;
+    font-size: 46px;
+  }
+  .pricelist1,
+  .pricelist2,
+  .pricelist3 {
+    width: 372px;
+    height: 461px;
+    border-radius: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    line-height: 40px;
+    position: relative;
+    transition: all 0.5s;
+
+  }
+  .pricelist button {
+    width: 150px;
+    height: 50px;
+    font-family: "Open Sans", sans-serif;
+    font-size: 13px;
+    font-weight: bold;
+    color: $color-white;
+    border-radius: 25px;
+    border: 0;
+    position: relative;
+    bottom: -50px
+  }
+
+  .pricelist{
+    span{
+      font-family: Raleway, sans-serif;
+      font-size: 12px;
+      font-weight: bold
+    }
+
+
+    li {
+    font-family: "Open Sans", sans-serif;
+    font-size: 14px;
+    text-align: center;
+
+  }
+}
+  .pricelist1 li:nth-of-type(1)::before,
+  .pricelist1 li:nth-of-type(2)::before,
+  .pricelist1 li:nth-of-type(3)::before {
+    content: "\f14a";
+    font-family: "Font Awesome 5 Free";
+    color: $color-green;
+    width: 5px;
+    height: 5px;
+    position: relative;
+    left: -10px;
+  }
+
+  .pricelist1 li:nth-of-type(4)::before,
+  .pricelist1 li:nth-of-type(5)::before {
+    content: "\f410";
+    font-family: "Font Awesome 5 Free";
+    color: $color-redish;
+    width: 5px;
+    height: 5px;
+    position: relative;
+    left: -10px;
+  }
+
+  .pricelist2 li:nth-of-type(1)::before,
+  .pricelist2 li:nth-of-type(2)::before,
+  .pricelist2 li:nth-of-type(3)::before,
+  .pricelist2 li:nth-of-type(4)::before {
+    content: "\f14a";
+    font-family: "Font Awesome 5 Free";
+    color: $color-green;
+    width: 5px;
+    height: 5px;
+    position: relative;
+    left: -10px;
+  }
+
+  .pricelist2 li:nth-of-type(5)::before {
+    content: "\f410";
+    font-family: "Font Awesome 5 Free";
+    color: $color-redish;
+    width: 5px;
+    height: 5px;
+    position: relative;
+    left: -10px
+  }
+
+  .pricelist3 li:nth-of-type(1)::before,
+  .pricelist3 li:nth-of-type(2)::before,
+  .pricelist3 li:nth-of-type(3)::before,
+  .pricelist3 li:nth-of-type(4)::before,
+  .pricelist3 li:nth-of-type(5)::before {
+    content: "\f14a";
+    font-family: "Font Awesome 5 Free";
+    color: $color-green;
+    width: 5px;
+    height: 5px;
+    position: relative;
+    left: -10px;
+  }
+  .pricelist1 {
+
+    border: 1px solid $color-redish;
+
+    button {
+      background-color: $color-redish;
+    }
+    h5 {
+      color: $color-redish;
+    }
+    span {
+      color: $color-white
+    }
+  }
+  .pricelist2 {
+    border: 1px solid $color-primary;
+  }
+  .pricelist2 button {
+    background-color: $color-primary;
+  }
+  .pricelist2 h5 {
+    color: $color-primary;
+  }
+
+  .pricelist3 {
+    border: 1px solid $color-green;
+  }
+  .pricelist3 button {
+    background-color: $color-green;
+  }
+  .pricelist3 h5 {
+    color: $color-green;
+  }
+
+  .pricelist1:hover {
+    transform: scale(1.03, 1.03);
+    box-shadow: 2px 2px 20px -10px $color-redish;
+  }
+
+  .pricelist2:hover {
+    transform: scale(1.03, 1.03);
+    box-shadow: 2px 2px 20px -10px $color-primary;
+  }
+  .pricelist3:hover {
+    transform: scale(1.03, 1.03);
+    box-shadow: 2px 2px 20px -10px $color-green;
+  }
