@@ -7,17 +7,7 @@
   margin: 0;
   box-sizing: border-box;
 }
-//:root{
-//  --color-primary:#08A6E4;
-//  --color-primary-shadow: rgba(7, 172, 230, .16);
-//  --color-redish: #fb3b64;
-//  --color-green: #55DFB4;
-//  --color-black: #000;
-//  --color-grey: #a5a5a5;
-//  --color-light-grey: #F7F7F7;
-//  --color-white: #fff
-//
-//}
+
 h3{
   font-family: Raleway, sans-serif;
   font-size: 36px;
@@ -49,6 +39,19 @@ a{
   box-shadow: 0 3px 6px rgba(0, 0, 0, .29);
   margin-bottom: 10px;
   position: relative;
+  .hamburger {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    right: -195px;
+
+  }
+  .hamburger_btn {
+    width: 11px;
+    height: 11px;
+    position: absolute;
+    right: -190px;
+  }
 
 }
 
@@ -59,14 +62,15 @@ header .logo{
   margin-left: 136px;
 }
 
-header .navi{
+.navi{
   font-family: 'Open Sans', sans-serif;
   font-size: 11px;
   font-weight: bold;
-
+  position: relative;
   display: block;
   margin-right: 136px;
   border-bottom: 4px solid rgba(0, 0, 0, 0);
+
   a {
     color: $color-grey;
     padding: 27px;
@@ -76,6 +80,7 @@ header .navi{
     width: 500px;
     justify-content: space-between;
   }
+
 }
 header .navi a:hover{
   color: #000;
@@ -85,14 +90,41 @@ header .navi a:hover{
 
 @media (max-width: 792px) {
   header .navi {
-    position: absolute;
     top: -200px;
-    left: 10px;
+    #hamburger:checked{
+      header .navi{
+        top: 200px;
+      }
+    }
+
     li {
       padding: 10px 0;
     }
   }
-}
+
+  //.header_container{
+  //  width: 100%;}
+
+  .header_container .hamburger {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    right: 100px;
+
+
+
+    }
+  }
+  .header_container .hamburger_btn {
+    width: 11px;
+    height: 11px;
+    position: absolute;
+    right: 100px;
+  }
+
+
+
+
   /* End of HEADER section*/
 
 
@@ -147,6 +179,7 @@ header .navi a:hover{
     justify-content: center;
   }
   .statistics h3 {
+
     margin: 100px;
 
   }
@@ -214,10 +247,16 @@ header .navi a:hover{
   }
 @media (max-width: 792px)
 {
+  .statistics h3{
+    width: 303px;
+    height: 112px;
+    text-align: center;
+  }
   .stats_menu
   {
   flex-direction: column;
   align-items: center;
+
   }
 
 }
@@ -239,12 +278,18 @@ header .navi a:hover{
    display: flex;
    justify-content: space-between;
    background-color: $color-white;
+
  }
+p {
+  font-family: "Open Sans", sans-serif;
+}
+
+
 
 .first .div_text{
   width: 415px;
   height: 186px;
-  margin: 25px auto;
+  margin: 91px auto;
   h3,
   p{
     margin-bottom: 50px;
@@ -317,17 +362,14 @@ header .navi a:hover{
 .benefits_container .third {
   justify-content: space-between;
   background-color: $color-light-grey;
-}
+
 
 .div_text{
   max-width: 530px;
   height: 370px;
   padding: 70px ;
   background-color: $color-white;
-  h3,
-  p{
-    margin-bottom: 50px;
-  }
+
   &::after {
       content: "";
       height: 4px;
@@ -336,7 +378,9 @@ header .navi a:hover{
       position: absolute;
       z-index: 6;
       }
+  }
 }
+
 .third img{
       max-width: 416px;
       height: 219px;
@@ -350,6 +394,74 @@ header .navi a:hover{
   background-color: $color-green;
   margin-left: 60px;
 }
+@media (max-width:792px) {
+  .benefits_container{
+    width: 314px;
+    height: 1295px;
+    margin: 42px 0;
+
+    .div_text
+    {
+      width: 100%;
+      height: 166px;
+      margin: 0;
+      padding: 0 21px 30px 21px !important;
+      &::after{
+        display: none;
+      }
+      h3 {
+        font-size: 30px;
+        padding-top: 26px;
+        margin-bottom: 20px;
+      }
+      p {
+        font-size: 14px;
+        margin-bottom: 30px;
+      }
+    }
+
+
+  }
+  .first{
+    flex-direction: column-reverse;
+
+    }
+  .second,
+  .third{
+    flex-direction: column;
+  }
+  .first,
+  .second,
+  .third{
+    width: 315px;
+    margin: 0 auto;
+    img{
+      width: 192px;
+      margin: 45px 40px 0 65px;
+    }
+    .div_picture1::before{
+      width: 90px;
+      height: 90px;
+      border-radius: 15px;
+      position: absolute;
+      transform: translate(160px, 10px) rotate(45deg);
+    }
+    .div_picture2::before{
+      width: 150px;
+      height: 150px;
+      position: absolute;
+      transform: translate(63px, 5px);
+    }
+
+    .div_picture3{
+      width: 100%;
+      margin: 0 0 36px 0;
+    }
+
+
+
+  }
+}
 
   .last {
     width: 100%;
@@ -358,6 +470,8 @@ header .navi a:hover{
     padding-top: 130px;
 
   }
+
+  //Section PRICING//
   .pricing {
     width: 1266px;
     height: 616px;
@@ -375,6 +489,7 @@ header .navi a:hover{
     align-items: center;
 
   }
+
 
   .pricelist h4 {
     font-family: Raleway, sans-serif;
@@ -412,7 +527,7 @@ header .navi a:hover{
     border-radius: 25px;
     border: 0;
     position: relative;
-    bottom: -50px
+    bottom: -15px
   }
 
   .pricelist{
@@ -506,7 +621,7 @@ header .navi a:hover{
   .pricelist2 {
     border: 1px solid $color-primary;
   }
-  .pricelist2 button {
+  .blue_btn{
     background-color: $color-primary;
   }
   .pricelist2 h5 {
@@ -536,3 +651,105 @@ header .navi a:hover{
     transform: scale(1.03, 1.03);
     box-shadow: 2px 2px 20px -10px $color-green;
   }
+
+@media (max-width: 792px) {
+  .last {
+    width: 374px;
+    padding: 0;
+    .pricing{
+      width: 339px;
+      height: 967px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+    .pricelist {
+      height: 967px;
+      margin: 0;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: center;
+
+    }
+      h3{
+        margin-bottom: 5px;
+      }
+      .pricelist1,
+      .pricelist2,
+      .pricelist3{
+        width: 293px;
+        height: 251px;
+
+      }
+      .pricelist_inside{
+        width: 100%;
+        display: flex;
+        margin-top: 20px;
+        justify-content: space-evenly;
+        align-items: center;
+      }
+      .priceheader{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+    }
+  }
+}
+
+.contact_container{
+  width: 896px;
+  height: 376px;
+  display: flex;
+  margin: 197px auto ;
+}
+.info,
+.form{
+  width: 50%;
+}
+.info{
+  h2{
+    font-family: Raleway, sans-serif;
+    font-size: 49px;
+    margin-bottom: 22px;
+  }
+  p{
+    font-family: "Open Sans", sans-serif;
+    font-size: 16px;
+    margin-bottom: 42px;
+  }
+  a{
+    font-family: "Open Sans", sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    color: $color-grey;
+    margin-right: 20px;
+  }
+
+
+}
+.form {
+  display: flex;
+  flex-direction: column;
+
+
+  .name,
+  .email {
+    font-family: "Open Sans", sans-serif;
+    font-weight: bold;
+    font-size: 11px;
+    color: $color-primary;
+    margin: 0 0 30px 0;
+
+  }
+  #email,
+  #name{
+    border-top: 0;
+    border-right: 0;
+    border-bottom: 1px solid $color-grey;
+    border-left: 0;
+    margin-bottom: 30px;
+
+  }
+}

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport"
@@ -18,8 +18,7 @@
     <header class="header_container">
 
         <h2 class="logo">BestShop</h2>
-        <input type="checkbox" class="hamburger" id="hamburger">
-        <label for="hamburger" class="hamburger_btn"></label>
+
         <div class="navi">
             <ul>
                 <li><a href="#">WHY US</a></li>
@@ -27,8 +26,10 @@
                 <li><a href="#pricelist">PRICES</a></li>
                 <li><a href="#">CONTACT</a></li>
             </ul>
-        </div>
 
+        </div>
+            <input type="checkbox" class="hamburger" id="hamburger">
+            <label for="hamburger" class="hamburger_btn"><i class="fas fa-bars"></i></label>
     </header>
 <section class="open">
     <div class="text">
@@ -104,27 +105,34 @@
 
 </section>
 <section class="last">
-    <section class="pricing" id="pricelist">
+    <section class="pricing">
         <h3>Pricing</h3>
         <section class="pricelist">
             <div class="pricelist1">
-                <h4>Basic</h4>
-                <h5>$0</h5>
-                <span>empty</span>
-                <ul>
-                    <li>100 MB HDD</li>
-                    <li>1 Subdomain</li>
-                    <li>2 E-mails</li>
-                    <li>Two Years license</li>
-                    <li>Full support</li>
-                </ul>
+                <section class="pricelist_inside">
+                    <div class="priceheader">
+                        <h4>Basic</h4>
+                        <h5>$0</h5>
+                        <span>empty</span>
+                    </div>
+                    <ul>
+                        <li>100 MB HDD</li>
+                        <li>1 Subdomain</li>
+                        <li>2 E-mails</li>
+                        <li>Two Years license</li>
+                        <li>Full support</li>
+                    </ul>
+                </section>
                 <button>Begin</button>
 
             </div>
             <div class="pricelist2">
-                <h4>Professional</h4>
-                <h5>$25</h5>
-                <span>Limited offer</span>
+                <section class="pricelist_inside">
+                    <div class="priceheader">
+                        <h4>Professional</h4>
+                        <h5>$25</h5>
+                        <span>Limited offer</span>
+                    </div>
                     <ul>
                         <li>100 MB HDD</li>
                         <li>1 Subdomain</li>
@@ -132,26 +140,64 @@
                         <li>One Years license</li>
                         <li>Full support</li>
                     </ul>
-                <button>Begin</button>
+                </section>
+                <button class="blue_btn">Begin</button>
             </div>
             <div class="pricelist3" >
-                <h4>Premium</h4>
-                <h5>$60</h5>
-                <span>Limited offer</span>
-                <ul>
-                    <li>2 GB HDD</li>
-                    <li>5 Subdomain</li>
-                    <li>20 E-mails</li>
-                    <li>Two Years license</li>
-                    <li>Full support</li>
-                </ul>
+                <section class="pricelist_inside">
+                    <div class="priceheader">
+                        <h4>Premium</h4>
+                        <h5>$60</h5>
+                        <span>Limited offer</span>
+                    </div>
+                    <ul>
+                        <li>2 GB HDD</li>
+                        <li>5 Subdomain</li>
+                        <li>20 E-mails</li>
+                        <li>Two Years license</li>
+                        <li>Full support</li>
+                    </ul>
+                </section>
                 <button>Begin</button>
             </div>
+        </section>
+    </section>
+        <section class="contact_container">
+            <div class="info">
+                <h2> Any questions?</h2>
+                <p>Leave your email address or call us!</p>
+                <div class="contact_data">
+                    <a href="mailto:info@bestshop.xyz"><img src="assets/Mail%20Icon.svg"/> info@bestshop.xyz</a>
+                    <a href="tel:123456789"> <img src="assets/Phone%20Icon.svg"/>   123 456 789</a>
+                </div>
+            </div>
+            <form class="form">
+                <label for="name" class="name">NAME</label>
+                <input type="text" id="name"/>
+                <label for="email" class="email">EMAIL</label>
+                <input type="email" id="email">
+                <div class="disclaimer">
+                    <input type="checkbox" id="checkbox">
+
+                    <label for="checkbox">
+                        <p>I hereby give consent for my personal data
+                        included in my application to be processed
+                        for the purposes of the recruitment process
+                        under the European Parliament’s and Council
+                        of the European Union Regulation on the Protection
+                        of Natural Persons as of 27 April 2016, with regard
+                        to the processing of personal data and on the free
+                        movement of such data, and repealing Directive
+                        95/46/EC (Data Protection Directive)</p></label>
+                </div>
+                <button type="submit" class="blue_btn">SEND</button>
+
+            </form>
         </section>
 
 
 
-    </section>
+
 
 
 

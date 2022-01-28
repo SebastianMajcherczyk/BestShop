@@ -400,6 +400,18 @@ a {
   margin-bottom: 10px;
   position: relative;
 }
+.header_container .hamburger {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  right: -195px;
+}
+.header_container .hamburger_btn {
+  width: 11px;
+  height: 11px;
+  position: absolute;
+  right: -190px;
+}
 
 header .logo {
   font-family: "Raleway", sans-serif;
@@ -408,19 +420,20 @@ header .logo {
   margin-left: 136px;
 }
 
-header .navi {
+.navi {
   font-family: "Open Sans", sans-serif;
   font-size: 11px;
   font-weight: bold;
+  position: relative;
   display: block;
   margin-right: 136px;
   border-bottom: 4px solid rgba(0, 0, 0, 0);
 }
-header .navi a {
+.navi a {
   color: #a5a5a5;
   padding: 27px;
 }
-header .navi ul {
+.navi ul {
   display: flex;
   width: 500px;
   justify-content: space-between;
@@ -433,14 +446,29 @@ header .navi a:hover {
 
 @media (max-width: 792px) {
   header .navi {
-    position: absolute;
     top: -200px;
-    left: 10px;
+  }
+  header .navi #hamburger:checked header .navi {
+    top: 200px;
   }
   header .navi li {
     padding: 10px 0;
   }
+
+  .header_container .hamburger {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    right: 100px;
+  }
 }
+.header_container .hamburger_btn {
+  width: 11px;
+  height: 11px;
+  position: absolute;
+  right: 100px;
+}
+
 /* End of HEADER section*/
 /*Start of OPEN section*/
 .open .text {
@@ -564,6 +592,12 @@ header .navi a:hover {
 }
 
 @media (max-width: 792px) {
+  .statistics h3 {
+    width: 303px;
+    height: 112px;
+    text-align: center;
+  }
+
   .stats_menu {
     flex-direction: column;
     align-items: center;
@@ -585,10 +619,14 @@ header .navi a:hover {
   background-color: #fff;
 }
 
+p {
+  font-family: "Open Sans", sans-serif;
+}
+
 .first .div_text {
   width: 415px;
   height: 186px;
-  margin: 25px auto;
+  margin: 91px auto;
 }
 .first .div_text h3,
 .first .div_text p {
@@ -659,18 +697,13 @@ header .navi a:hover {
   justify-content: space-between;
   background-color: #F7F7F7;
 }
-
-.div_text {
+.benefits_container .third .div_text {
   max-width: 530px;
   height: 370px;
   padding: 70px;
   background-color: #fff;
 }
-.div_text h3,
-.div_text p {
-  margin-bottom: 50px;
-}
-.div_text::after {
+.benefits_container .third .div_text::after {
   content: "";
   height: 4px;
   width: 330px;
@@ -694,6 +727,76 @@ header .navi a:hover {
   margin-left: 60px;
 }
 
+@media (max-width: 792px) {
+  .benefits_container {
+    width: 314px;
+    height: 1295px;
+    margin: 42px 0;
+  }
+  .benefits_container .div_text {
+    width: 100%;
+    height: 166px;
+    margin: 0;
+    padding: 0 21px 30px 21px !important;
+  }
+  .benefits_container .div_text::after {
+    display: none;
+  }
+  .benefits_container .div_text h3 {
+    font-size: 30px;
+    padding-top: 26px;
+    margin-bottom: 20px;
+  }
+  .benefits_container .div_text p {
+    font-size: 14px;
+    margin-bottom: 30px;
+  }
+
+  .first {
+    flex-direction: column-reverse;
+  }
+
+  .second,
+.third {
+    flex-direction: column;
+  }
+
+  .first,
+.second,
+.third {
+    width: 315px;
+    margin: 0 auto;
+  }
+  .first img,
+.second img,
+.third img {
+    width: 192px;
+    margin: 45px 40px 0 65px;
+  }
+  .first .div_picture1::before,
+.second .div_picture1::before,
+.third .div_picture1::before {
+    width: 90px;
+    height: 90px;
+    border-radius: 15px;
+    position: absolute;
+    transform: translate(160px, 10px) rotate(45deg);
+  }
+  .first .div_picture2::before,
+.second .div_picture2::before,
+.third .div_picture2::before {
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    transform: translate(63px, 5px);
+  }
+  .first .div_picture3,
+.second .div_picture3,
+.third .div_picture3 {
+    width: 100%;
+    margin: 0 0 36px 0;
+  }
+}
 .last {
   width: 100%;
   height: 1395px;
@@ -757,7 +860,7 @@ header .navi a:hover {
   border-radius: 25px;
   border: 0;
   position: relative;
-  bottom: -50px;
+  bottom: -15px;
 }
 
 .pricelist span {
@@ -848,7 +951,7 @@ header .navi a:hover {
   border: 1px solid #08A6E4;
 }
 
-.pricelist2 button {
+.blue_btn {
   background-color: #08A6E4;
 }
 
@@ -881,5 +984,97 @@ header .navi a:hover {
 .pricelist3:hover {
   transform: scale(1.03, 1.03);
   box-shadow: 2px 2px 20px -10px #55DFB4;
+}
+
+@media (max-width: 792px) {
+  .last {
+    width: 374px;
+    padding: 0;
+  }
+  .last .pricing {
+    width: 339px;
+    height: 967px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .last .pricing .pricelist {
+    height: 967px;
+    margin: 0;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .last .pricing h3 {
+    margin-bottom: 5px;
+  }
+  .last .pricing .pricelist1,
+.last .pricing .pricelist2,
+.last .pricing .pricelist3 {
+    width: 293px;
+    height: 251px;
+  }
+  .last .pricing .pricelist_inside {
+    width: 100%;
+    display: flex;
+    margin-top: 20px;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  .last .pricing .priceheader {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+.contact_container {
+  width: 896px;
+  height: 376px;
+  display: flex;
+  margin: 197px auto;
+}
+
+.info,
+.form {
+  width: 50%;
+}
+
+.info h2 {
+  font-family: Raleway, sans-serif;
+  font-size: 49px;
+  margin-bottom: 22px;
+}
+.info p {
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  margin-bottom: 42px;
+}
+.info a {
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  color: #a5a5a5;
+  margin-right: 20px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+}
+.form .name,
+.form .email {
+  font-family: "Open Sans", sans-serif;
+  font-weight: bold;
+  font-size: 11px;
+  color: #08A6E4;
+  margin: 0 0 30px 0;
+}
+.form #email,
+.form #name {
+  border-top: 0;
+  border-right: 0;
+  border-bottom: 1px solid #a5a5a5;
+  border-left: 0;
+  margin-bottom: 30px;
 }
 /*# sourceMappingURL=main.css.map */
